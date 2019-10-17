@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+
+  <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="./checkout.form.validation.css">
+</head>
+
+<body>
+
+  <div class="wrapper">
+
+    <div class="white-box">
+
+      <div class="js-validation-form form">
+        <div class="field">
+          <input type="text" class="js-validation js-validation-email" placeholder="E-MAIL" />
+          <div class='js-validation-message-container'>
+            <div class="js-validation-message js-validation-message-email">
+              Please enter correct email address
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="white-box">
+
+      <div class="js-validation-form js-validation-billing-address-form form">
+        <div class="field">
+          <select id="billing-addresses" class="js-validate-address-change-select">
+            <option>New address</option>
+            <option>Address 1</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label><input type="checkbox" class="js-validation-wants-vat-checkbox vat-switch" />
+            I want to receive VAT invoice
+          </label>
+        </div>
+
+        <div class="vat-yes hidden">
+
+          <div class="field">
+            <input type="text" placeholder="Company" class="js-validation js-validation-company" />
+            <div class='js-validation-message-container'>
+              <div class="js-validation-message js-validation-message-company">
+                Please enter company name
+              </div>
+            </div>
+          </div>
+
+          <div class="field">
+            <input type="text" placeholder="VAT number" class="js-validation js-validation-vatnumber" />
+            <div class='js-validation-message-container'>
+              <div class="js-validation-message js-validation-message-vatnumber js-validation-message-vatnumber-en-vat">
+                Please enter VAT number
+              </div>
+              <div class="js-validation-message js-validation-message-vatnumber js-validation-message-vatnumber-pl-vat">
+                Please enter 10-numbers VAT number
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="vat-no">
+
+          <div class="field">
+            <input type="text" placeholder="First name" class="js-validation js-validation-firstname" />
+            <div class='js-validation-message-container'>
+              <div class="js-validation-message js-validation-message-firstname">
+                Please enter your first name
+              </div>
+            </div>
+          </div>
+
+          <div class="field">
+            <input type="text" placeholder="Last name" class="js-validation js-validation-lastname" />
+            <div class='js-validation-message-container'>
+              <div class="js-validation-message js-validation-message-lastname">
+                Please enter your last name
+              </div>
+            </div>
+          </div>
+
+          <div class="field">
+            <input type="text" placeholder="Company (optional)" />
+          </div>
+
+        </div>
+
+        <div class="field">
+          <input type="tel" placeholder="Contact number" class="js-validation js-validation-telnumber">
+          <div class='js-validation-message-container'>
+            <div class="js-validation-message js-validation-message-telnumber js-validation-message-telnumber-pl">
+              Please enter 9-characters phone number
+            </div>
+            <div class="js-validation-message js-validation-message-telnumber js-validation-message-telnumber-en">
+              Please enter phone number
+            </div>
+          </div>
+        </div>
+
+        <div class="field">
+          <input type="text" placeholder="Street" class="js-validation js-validation-street" />
+          <div class='js-validation-message-container'>
+            <div class="js-validation-message js-validation-message-street">Please enter street name without @
+              character
+            </div>
+          </div>
+        </div>
+
+        <div class="field">
+          <input type="text" placeholder="No." class="js-validation js-validation-apartmentnumber" />
+          <div class='js-validation-message-container'>
+            <div class="js-validation-message js-validation-message-apartmentnumber">Please enter apartment
+              number
+            </div>
+          </div>
+        </div>
+
+        <div class="field">
+          <input type="text" placeholder="Place" />
+        </div>
+
+        <div class="field">
+          <input type="text" placeholder="Zip code" class="js-validation js-validation-zipcode" />
+          <div class='js-validation-message-container'>
+            <div class="js-validation-message js-validation-message-zipcode js-validation-message-zipcode-pl">Please
+              enter zip code in XX-XXX format
+            </div>
+            <div class="js-validation-message js-validation-message-zipcode js-validation-message-zipcode-en">Please
+              enter zip code
+            </div>
+          </div>
+        </div>
+
+        <div class="field">
+          <input type="text" placeholder="Town / City" class="js-validation js-validation-city" />
+          <div class='js-validation-message-container'>
+            <div class="js-validation-message js-validation-message-city">Please enter town / city name
+            </div>
+          </div>
+        </div>
+
+        <div class="field">
+          <select class="js-validation js-validation-country">
+            <option value="">Select country:</option>
+            <option value="PL">Poland</option>
+            <option value="EN">Not Poland</option>
+          </select>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="white-box">
+
+      <div class="field">
+        <label><input type="checkbox" class="js-validation-different-address address-switch" />Delivery to another
+          address</label>
+      </div>
+
+    </div>
+
+
+    <div class="white-box another-address">
+
+      <div class="js-validation-form js-validation-shipping-address-form form">
+
+        <div class="field">
+          <select class="js-validate-address-change-select">
+            <option>New Address</option>
+            <option value="address1">Address1</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label><input type="checkbox" />Save address into address book</label>
+        </div>
+
+        <div class="field">
+          <input type="text" placeholder="First name" class="js-validation js-validation-firstname" />
+          <div class='js-validation-message-container'>
+            <div class="js-validation-message js-validation-message-firstname">Please enter your first name
+            </div>
+          </div>
+        </div>
+
+        <div class="field">
+          <input type="text" placeholder="Last name" class="js-validation js-validation-lastname" />
+          <div class='js-validation-message-container'>
+            <div class="js-validation-message js-validation-message-lastname">Please enter your last name
+            </div>
+          </div>
+        </div>
+
+        <div class="field">
+          <input type="text" placeholder="Company (optional)" />
+        </div>
+
+        <div class="field">
+          <input type="tel" placeholder="Contact number" class="js-validation js-validation-telnumber" />
+          <div class='js-validation-message-container'>
+            <div class="js-validation-message js-validation-message-telnumber js-validation-message-telnumber-pl">
+              Please enter 9-characters phone number
+            </div>
+            <div class="js-validation-message js-validation-message-telnumber js-validation-message-telnumber-en">
+              Please enter phone number
+            </div>
+          </div>
+        </div>
+
+        <div class="field">
+          <input type="text" placeholder="Street" class="js-validation js-validation-street" />
+          <div class='js-validation-message-container'>
+            <div class="js-validation-message js-validation-message-street">
+              Please enter street name without @ character
+            </div>
+          </div>
+        </div>
+
+        <div class="field">
+          <input type="text" placeholder="No." class="js-validation js-validation-apartmentnumber" />
+          <div class='js-validation-message-container'>
+            <div class="js-validation-message js-validation-message-apartmentnumber">
+              Please enter apartment number
+            </div>
+          </div>
+        </div>
+
+        <div class="field">
+          <input type="text" placeholder="Place" />
+        </div>
+
+        <div class="field">
+          <input type="text" placeholder="Zip code" class="js-validation js-validation-zipcode" />
+          <div class='js-validation-message-container'>
+            <div class="js-validation-message js-validation-message-zipcode js-validation-message-zipcode-pl">
+              Please enter zip code in XX-XXX format
+            </div>
+            <div class="js-validation-message js-validation-message-zipcode js-validation-message-zipcode-en">
+              Please enter zip code
+            </div>
+          </div>
+        </div>
+
+        <div class="field">
+          <input type="text" placeholder="Town / City" class="js-validation js-validation-city" />
+          <div class='js-validation-message-container'>
+            <div class="js-validation-message js-validation-message-city">Please enter town / city name
+            </div>
+          </div>
+        </div>
+
+        <div class="field">
+          <select class="js-validation js-validation-country">
+            <option value="">Select country:</option>
+            <option value="PL">Poland</option>
+            <option value="EN">Not Poland</option>
+          </select>
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="white-box">
+
+      <div class="field">
+        <div class="js-validation-disable-submit-button">
+          <div class="js-validation-blockade-container">
+            <div class="js-validation-blockade button" title="Continue checkout">Continue checkout
+            </div>
+            <input type="submit" class="js-validation-submit-button button" value="Continue checkout" />
+            <div class="js-validation-blockade-message">Please complete the form correctly</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+
+  </div>
+
+
+  </div>
+
+</body>
+<script src="./scripts.js"></script>
+<script src="./checkout.form.validation.dev.js"></script>
+
+</html>

@@ -1,0 +1,87 @@
+:root {
+  --validation-nagative-color: rgb(244, 67, 54);
+  --validation-positive-color: green;
+}
+
+.js-validation-message-container{
+  position: relative;
+  max-height: 0;
+  transition: max-height .15s linear;
+}
+
+.js-validation-message-container.show {
+  max-height: 9999px;
+}
+
+
+.js-validation-message {
+  color: var(--validation-nagative-color);
+  opacity: 0;
+  transition: max-height .5s linear, opacity .2s linear;
+  text-transform: uppercase;
+  font-size: 9px;
+  letter-spacing: .05em;
+  max-height: 0px;
+  width: 100%;
+  text-align: center;
+  position: relative;
+  top: 5px;
+}
+
+.js-validation-message.show {
+  opacity: 1;
+  max-height: 50px;
+}
+
+.js-validation-form input.js-validation-correct {
+  border-color: var(--validation-positive-color) !important;
+}
+
+.js-validation-form input.js-validation-incorrect {
+  border-color: var(--validation-nagative-color) !important;
+}
+
+.js-validation-blockade-container {
+  position: relative;
+}
+
+.js-validation-blockade {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.js-validation-blockade-message{
+  position: absolute;
+  left: 0;
+  top: calc(100% + 5px);
+  width: 100%;
+  font-size: 9px;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+  color: var(--validation-nagative-color);
+  opacity: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+.js-validation-blockade-message.show{
+  height: auto;
+  opacity: 1;
+  transition: opacity .15s linear;
+}
+
+@media screen and (max-width: 991px) {
+  .js-validation-blockade-container {
+    width: 100%;
+    margin-top: 15px;
+  }
+
+  .js-validation-blockade-message {
+    top: auto;
+    bottom: calc(100% + 5px);
+  }
+}
