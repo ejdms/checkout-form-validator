@@ -37,7 +37,9 @@
 // 4. Error message is showing on when false submit button was clicked and validation failed
 
 (function() {
-  const validationForms = document.querySelectorAll(".js-validation-form");
+  const validationForms = Array.from(
+    document.querySelectorAll(".js-validation-form")
+  );
 
   ///////////////////////////////////////////
   ///////////////////////////////////////////
